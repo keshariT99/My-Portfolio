@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Users, BarChart3, Headphones, RefreshCw, Laptop, Shield, BookOpen, Users2 } from 'lucide-react';
 import { Feature } from '../types/Feature';
 
