@@ -43,7 +43,7 @@ const Skills = () => {
     
     uiux: [
       {name: 'Figma', level: 'Experienced'},
-      {name: 'Wordpress', level: 'Basic'},
+      {name: 'Adobe XD', level: 'Intermediate'},
     ],
 
     api: [
