@@ -31,7 +31,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#0a0a0a] border-t border-[#1a1a1a] pt-16 pb-8 px-4">
+    <footer className="bg-[#0a0a0a] border-t-[3px] border-[#1a1a1a] pt-16 pb-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-8 mb-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
