@@ -21,7 +21,7 @@ const Skills = () => {
       { name: 'HTML/CSS', level: 'Experienced' },
       { name: 'JavaScript', level: 'Experienced' },
       { name: 'React', level: 'Experienced' },
-      { name: 'TypeScript', level: 'Intermediate' },
+      { name: 'TypeScript', level: 'Basic' },
     ],
 
     backend: [
@@ -43,7 +43,7 @@ const Skills = () => {
     
     uiux: [
       {name: 'Figma', level: 'Experienced'},
-      {name: 'Adobe XD', level: 'Intermediate'},
+      
     ],
 
     api: [

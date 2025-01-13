@@ -11,7 +11,7 @@ const Projects = () => {
       description: "Embark on unforgettable journeys with our cutting-edge Travel Platform. Seamlessly blending convenience with adventure, our site offers more than just bookings-it crafts exceptional experiences. Every feature is designed to inspire your wanderlust and simplify your travels. Whether it's flights, accommodations, or unique activities, we ensure that each journey is smooth and memorable. Welcome to the future of travel exploration.",
       image: "travelweb.jpg",
       category: "Web",
-      stack: ["ReactJs", "Tailwind CSS", "NodeJs"],
+      stack: ["React", "Tailwind CSS", "Javascript"],
       link: ["https://github.com/keshariT99/TravelWeb"],
       demo: ["https://travel-bug-web.vercel.app"]
     },

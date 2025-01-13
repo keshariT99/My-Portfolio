@@ -41,14 +41,14 @@ const About = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.5 }} >
           <p className="text-gray-400 transitionX(0) duration-300">
-          I am a passionate and dedicated web developer with a Bachelor of Science (Honours) in Information Technology from the 
-                        Sri Lanka Institute of Information Technology (SLIIT), specializing in IT. With a strong foundation in modern web technologies 
-                        and a keen eye for detail, Keshari creates engaging, user-friendly websites and applications tailored to meet client needs.
-                        <br /><br />
-                        My technical expertise covers both front-end and back-end development, ensuring seamless functionality and aesthetic appeal. 
-                        Proficient in tools and technologies such as HTML, CSS, JavaScript, React, and Node.js, I bring ideas to life with clean, 
-                        efficient code. Beyond coding, I have a solid understanding of testing frameworks like Selenium, JMeter, and Postman, 
-                        ensuring robust and reliable software solutions.
+          I am a passionate and dedicated web developer with a Bachelor of Science (Honours) in Information Technology from the Sri Lanka Institute of Information Technology (SLIIT), specializing in IT. With a strong foundation in modern web technologies and a keen eye for detail, I create engaging, user-friendly websites and applications tailored to meet client needs.
+          <br /><br />
+          In addition to web development, I have a deep interest in UI/UX design, focusing on crafting intuitive, aesthetically pleasing interfaces that enhance user experiences. My design process involves user research, wireframing, prototyping, and usability testing. Proficient in design tool such as Figma, I transform concepts into seamless and engaging user journeys.
+          <br /><br />
+          I specialize in front-end development, combining technical expertise with a focus on creating visually appealing and highly functional user interfaces. Proficient in tools and technologies such as HTML, CSS, JavaScript, and React. Beyond coding, I have a solid understanding of testing frameworks like Selenium, and Postman.
+          <br /><br />
+          During my internship period, I developed a strong foundation in front-end development by learning HTML, CSS, and Bootstrap to create responsive web designs. I further expanded my skills by working with React.js, using its features like routes, hooks (useState, useEffect), and event handling to build dynamic and interactive web applications. I have hands-on experience integrating APIs, managing state, and implementing designs from Figma into functional UIs. 
+          
           </p>
        </motion.div>
        
