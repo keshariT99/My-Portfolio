@@ -8,17 +8,18 @@ const Hero = () => {
         <div>
           <h2 className="text-xl mb-2">Hello, I'm <span className="text-[#00FFFF]">Keshari Thennakoon</span></h2>
           <h1 className="text-5xl font-bold mb-4">
-            A <span className="text-[#00E7FF]"> {/*<span className="text-[#00E7FF]">Fullstack</span><br />*/}
+            A&nbsp;
+            <span className="text-[#00E7FF] inline-block"> 
           <Typewriter
             options={{
-              strings: ['Web Developer', 'UI/UX Designer'],
+              strings: ['Web Developer', 'UI/UX Engineer', 'UI/UX Designer'],
               autoStart: true,
               loop: true,
               delay: 75, // Controls the typing speed
               deleteSpeed: 50, // Controls the deleting speed
             }}
           />
-        </span> <br/>
+        </span> 
         </h1>
           <p className="text-gray-400 mb-8">
           I am a recent graduate in Information Technology from SLIIT, equipped with strong technical, analytical, and interpersonal skills. 
