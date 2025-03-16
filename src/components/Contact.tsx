@@ -37,30 +37,30 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="First name"
-                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4ADEDC]"
               />
               <input
                 type="text"
                 placeholder="Last name"
-                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4ADEDC]"
               />
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <input
                 type="email"
                 placeholder="Email address"
-                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4ADEDC]"
               />
               <input
                 type="tel"
                 placeholder="Phone number"
-                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+                className="bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4ADEDC]"
               />
             </div>
             <textarea
               placeholder="Message"
               rows={6}
-              className="w-full bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#39FF14]"
+              className="w-full bg-[#0f0f0f] text-gray-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4ADEDC]"
             ></textarea>
             <button
               type="submit"
