@@ -8,7 +8,7 @@ const Hero = () => {
         <div>
           <h2 className="text-xl mb-2">Hello, I'm <span className="text-[#00FFFF]">Keshari Thennakoon</span></h2>
           <h1 className="text-5xl font-bold mb-4">
-            A <span className="text-[#00E7FF]"> {/*<span className="text-[#00E7FF]">Fullstack</span><br />*/}
+            A </h1><span className="text-[#00E7FF]"> {/*<span className="text-[#00E7FF]">Fullstack</span><br />*/}
           <Typewriter
             options={{
               strings: ['Web Developer', 'UI/UX Designer'],
@@ -19,7 +19,7 @@ const Hero = () => {
             }}
           />
         </span>
-          </h1>
+          
           <p className="text-gray-400 mb-8">
           I am a recent graduate in Information Technology from SLIIT, equipped with strong technical, analytical, and interpersonal skills. 
                 I am eager to leverage my academic background and practical experience in a Software Design & Development. My passion for coding and problem-solving drives me to 
