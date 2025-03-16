@@ -18,7 +18,7 @@ const Hero = () => {
               deleteSpeed: 50, // Controls the deleting speed
             }}
           />
-        </span>
+        </span> <br/>
         </h1>
           <p className="text-gray-400 mb-8">
           I am a recent graduate in Information Technology from SLIIT, equipped with strong technical, analytical, and interpersonal skills. 
