@@ -8,7 +8,7 @@ const Hero = () => {
         <div>
           <h2 className="text-xl mb-2">Hello, I'm <span className="text-[#00FFFF]">Keshari Thennakoon</span></h2>
           <h1 className="text-5xl font-bold mb-4">
-            A <span className="text-[#00E7FF]">Fullstack</span><br />
+            A {/*<span className="text-[#00E7FF]">Fullstack</span><br />*/}
             <span className="text-[#00E7FF]">
           <Typewriter
             options={{
