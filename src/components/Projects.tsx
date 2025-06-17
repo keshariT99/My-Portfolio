@@ -36,7 +36,7 @@ const Projects = () => {
     {
       title: "Pizza Delivery Application",
       description: "Indulge in the ultimate pizza experience with our Pizza Delivery Application. Fast, easy, and delicious-order your favorite pizzas from a wide variety of options, all from the comfort of your home. With an attractive user experience, our app makes ordering as fun as enjoying your pizza. It brings the pizzeria to your doorstep with real-time order tracking, personalized recommendations, and seamless payment options.",
-      image: "pizza.png",
+      image: "pizzadelivery.jpg",
       category: "UI/UX",
       stack: ["Figma"],
       link: ["https://www.figma.com/design/hdgEVNIw2QLSeTdCDtMKdL/mobileApp?node-id=0-1&t=efiDRrO1lSAixBro-1"],
@@ -45,11 +45,29 @@ const Projects = () => {
     {
       title: "Home Construction Application",
       description: "A Home Construction Application is an all-in-one platform designed to simplify the homebuilding process for homeowners, contractors, and project managers. It offers a user-friendly interface for managing key elements of construction projects, making it easier to track progress, budgets, and tasks.",
-      image: "homeD.png",
+      image: "construction.jpg",
       category: "UI/UX",
       stack: ["Figma"],
       link: ["https://www.figma.com/design/y9BBvLy0jXkp9BJpgz4Sai/MobileApp?node-id=0-1&t=cyMD8DvPfZq2005m-1"],
       demo: ["https://drive.google.com/file/d/1PvI3ATiSFCZOmkYGHkgshq19IlM5478V/view?usp=sharing"]
+    },
+    {
+      title: "Healthcare Booking Application",
+      description: "A Healthcare Booking Application is a user-friendly platform that streamlines the process of finding and booking medical appointments. It includes essential features like a welcome screen, login, home dashboard, doctor search and filter, detailed doctor profiles, and easy appointment booking — making healthcare access more convenient for patients.",
+      image: "booking.jpg",
+      category: "UI/UX",
+      stack: ["Figma"],
+      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=66-170&t=cQe7VfrOH4LVWLGP-1"],
+      demo: [""]
+    },
+    {
+      title: "Job Search platform Application",
+      description: "A Job Search Platform Application is designed to help users easily find and apply for jobs. It features a clean and responsive home page and search results page, available in both light and dark modes. The interface allows users to browse job listings, filter results, and view key job details to support a smooth job-hunting experience.",
+      image: "jobSearch.JPG",
+      category: "UI/UX",
+      stack: ["Figma"],
+      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=0-1&t=cQe7VfrOH4LVWLGP-1"],
+      demo: [""]
     }
   ];
 
