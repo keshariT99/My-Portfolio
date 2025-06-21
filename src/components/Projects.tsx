@@ -52,14 +52,15 @@ const Projects = () => {
       demo: ["https://drive.google.com/file/d/1PvI3ATiSFCZOmkYGHkgshq19IlM5478V/view?usp=sharing"]
     },
     {
-      title: "Healthcare Booking Application",
-      description: "A Healthcare Booking Application is a user-friendly platform that streamlines the process of finding and booking medical appointments. It includes essential features like a welcome screen, login, home dashboard, doctor search and filter, detailed doctor profiles, and easy appointment booking — making healthcare access more convenient for patients.",
-      image: "booking.jpg",
+      title: "Clothing Brand Application",
+      description: "a modern and stylish online shopping platform designed for women aged 18–35. It offers a seamless browsing and buying experience with features like a welcoming homepage, curated product categories, new arrivals carousel, detailed product pages, and an easy-to-use shopping cart. With soft colors, elegant typography, and mobile-friendly design, this makes fashion shopping effortless and enjoyable.",
+      image: "clothingweb.JPG",
       category: "UI/UX",
       stack: ["Figma"],
-      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=66-170&t=cQe7VfrOH4LVWLGP-1"],
-      demo: [""]
+      link: ["https://www.figma.com/design/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1"],
+      demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "]
     },
+  
     {
       title: "Job Search platform Application",
       description: "A Job Search Platform Application is designed to help users easily find and apply for jobs. It features a clean and responsive home page and search results page, available in both light and dark modes. The interface allows users to browse job listings, filter results, and view key job details to support a smooth job-hunting experience.",
@@ -68,7 +69,17 @@ const Projects = () => {
       stack: ["Figma"],
       link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=0-1&t=cQe7VfrOH4LVWLGP-1"],
       demo: [""]
-    }
+    },
+
+    {
+      title: "Healthcare Booking Application",
+      description: "A Healthcare Booking Application is a user-friendly platform that streamlines the process of finding and booking medical appointments. It includes essential features like a welcome screen, login, home dashboard, doctor search and filter, detailed doctor profiles, and easy appointment booking — making healthcare access more convenient for patients.",
+      image: "booking.jpg",
+      category: "UI/UX",
+      stack: ["Figma"],
+      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=66-170&t=cQe7VfrOH4LVWLGP-1"],
+      demo: [""]
+    },
   ];
 
   const filters = ['All', 'Web', 'UI/UX'];
