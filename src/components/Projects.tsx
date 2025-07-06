@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -13,7 +14,8 @@ const Projects = () => {
       category: "Web",
       stack: ["React", "Tailwind CSS", "Javascript"],
       link: ["https://github.com/keshariT99/TravelWeb"],
-      demo: ["https://travel-bug-web.vercel.app"]
+      demo: ["https://travel-bug-web.vercel.app"],
+      caseStudy: "/casestudy/traveling-website"
     },
     {
       title: "Solar Boat E-commerce website",
@@ -82,7 +84,7 @@ const Projects = () => {
     },
   ];
 
-  const filters = ['All', 'Web', 'UI/UX'];
+  const filters = ['All', 'Web', 'UI/UX', 'Case Study'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
