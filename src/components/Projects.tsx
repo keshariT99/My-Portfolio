@@ -85,7 +85,7 @@ const Projects = () => {
     },
   ];
 
-  const filters = ['All', 'Web', 'UI/UX'];
+  const filters = ['All', 'Web', 'UI/UX', 'Case Study'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
