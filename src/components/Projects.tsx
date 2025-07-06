@@ -15,7 +15,7 @@ const Projects = () => {
       stack: ["React", "Tailwind CSS", "Javascript"],
       link: ["https://github.com/keshariT99/TravelWeb"],
       demo: ["https://travel-bug-web.vercel.app"],
-      caseStudy: "/casestudy/traveling-website"
+      
     },
     {
       title: "Solar Boat E-commerce website",
@@ -60,7 +60,8 @@ const Projects = () => {
       category: "UI/UX",
       stack: ["Figma"],
       link: ["https://www.figma.com/design/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1"],
-      demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "]
+      demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "],
+      caseStudy: "/casestudy/traveling-website"
     },
   
     {
@@ -84,7 +85,7 @@ const Projects = () => {
     },
   ];
 
-  const filters = ['All', 'Web', 'UI/UX', 'Case Study'];
+  const filters = ['All', 'Web', 'UI/UX'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
