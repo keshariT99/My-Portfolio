@@ -14,7 +14,7 @@ const Projects = () => {
       stack: ["Figma"],
       link: ["https://www.figma.com/design/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1"],
       demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "],
-      caseStudy: "/casestudy/traveling-website"
+      caseStudy: "/casestudy/fashion-web"
     },
     {
       title: "Pizza Delivery Application",

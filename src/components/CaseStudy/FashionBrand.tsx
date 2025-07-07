@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const CaseStudy = () => {
+const FashionBrand = () => {
 
   const navigate = useNavigate();
 
@@ -270,4 +270,4 @@ const [showTopBtn, setShowTopBtn] = useState(false);
   );
 };
 
-export default CaseStudy;
+export default FashionBrand;

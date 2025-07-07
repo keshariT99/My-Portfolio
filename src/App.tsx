@@ -10,7 +10,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer/Footer';
 import Courses from './components/Courses';
-import CaseStudy from './components/CaseStudy';
+import FashionBrand from './components/CaseStudy/FashionBrand';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-gray-100">
-       {location.pathname !== "/casestudy/traveling-website" && <Navbar />}
+       {location.pathname !== "/casestudy/fashion-web" && <Navbar />}
 
       <ScrollToTop />
       
@@ -40,7 +40,7 @@ function App() {
               </>
             }
           />
-          <Route path="/casestudy/traveling-website" element={<CaseStudy />} />
+          <Route path="/casestudy/fashion-web" element={<FashionBrand />} />
         </Routes>
       </main>
       <Footer />
