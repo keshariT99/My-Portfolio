@@ -7,6 +7,16 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Clothing Brand Application",
+      description: "a modern and stylish online shopping platform designed for women aged 18–35. It offers a seamless browsing and buying experience with features like a welcoming homepage, curated product categories, new arrivals carousel, detailed product pages, and an easy-to-use shopping cart. With soft colors, elegant typography, and mobile-friendly design, this makes fashion shopping effortless and enjoyable.",
+      image: "clothingweb.JPG",
+      category: "UI/UX",
+      stack: ["Figma"],
+      link: ["https://www.figma.com/design/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1"],
+      demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "],
+      caseStudy: "/casestudy/traveling-website"
+    },
+    {
       title: "Pizza Delivery Application",
       description: "Indulge in the ultimate pizza experience with our Pizza Delivery Application. Fast, easy, and delicious-order your favorite pizzas from a wide variety of options, all from the comfort of your home. With an attractive user experience, our app makes ordering as fun as enjoying your pizza. It brings the pizzeria to your doorstep with real-time order tracking, personalized recommendations, and seamless payment options.",
       image: "pizzadelivery.jpg",
@@ -24,17 +34,6 @@ const Projects = () => {
       link: ["https://www.figma.com/design/y9BBvLy0jXkp9BJpgz4Sai/MobileApp?node-id=0-1&t=cyMD8DvPfZq2005m-1"],
       demo: ["https://drive.google.com/file/d/1PvI3ATiSFCZOmkYGHkgshq19IlM5478V/view?usp=sharing"]
     },
-    {
-      title: "Clothing Brand Application",
-      description: "a modern and stylish online shopping platform designed for women aged 18–35. It offers a seamless browsing and buying experience with features like a welcoming homepage, curated product categories, new arrivals carousel, detailed product pages, and an easy-to-use shopping cart. With soft colors, elegant typography, and mobile-friendly design, this makes fashion shopping effortless and enjoyable.",
-      image: "clothingweb.JPG",
-      category: "UI/UX",
-      stack: ["Figma"],
-      link: ["https://www.figma.com/design/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1"],
-      demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "],
-      caseStudy: "/casestudy/traveling-website"
-    },
-  
     {
       title: "Job Search platform Application",
       description: "A Job Search Platform Application is designed to help users easily find and apply for jobs. It features a clean and responsive home page and search results page, available in both light and dark modes. The interface allows users to browse job listings, filter results, and view key job details to support a smooth job-hunting experience.",
