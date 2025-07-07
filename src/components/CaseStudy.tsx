@@ -18,10 +18,43 @@ const CaseStudy = () => {
     },
   }
 
+    const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 }, // Start from the left with reduced opacity
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7 }, // Adjust the duration as needed
+    },
+  }
+
+  const fadeUp = {
+    hidden: {
+    opacity: 0,
+    y: 40, // starts 40px below
+  },
+  visible: {
+    opacity: 1,
+    y: 0, // animates to natural position
+    transition: {
+      duration: 0.8,
+      ease: 'easeOut',
+      },
+    },
+  }
+
+  const fadeUpStagger = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
 
-      <div className="absolute top-20 left-6 z-50">
+      <div className="absolute top-10 left-6 z-50">
   <button
     onClick={() => navigate('/')}
     className="flex items-center gap-2 text-[#75b9f1] hover:text-white transition-colors"
@@ -33,19 +66,19 @@ const CaseStudy = () => {
       
       {/* Background title */}
        <section className="relative w-full h-screen overflow-hidden flex items-center mt-10">
-      <h1 className="absolute text-[120px] font-extrabold text-[#75b9f1] opacity-4 left-10 top-10 z-0 select-none px-40 transition-opacity duration-700 ease-out opacity-0 animate-fade-in">
+      <h1 className="absolute text-[120px] font-extrabold text-[#75b9f1] opacity-4 left-20 top-10 z-0 select-none px-40 transition-opacity duration-700 ease-out opacity-0 animate-fade-in">
         VIVEE FASHION
       </h1>
 
       {/* Content container */}
-      <motion.div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-60"
+      <motion.div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-80"
       variants={fadeInRight}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}>
         {/* Left text */}
         <div className="text-[#75b9f1] max-w-md">
-          <h2 className="text-2xl md:text-3xl  font-semibold mb-60">
+          <h2 className="text-xl md:text-xl  font-semibold  mb-60">
             Every Outfit Is A Step Toward Your Best Self
           </h2>
         </div>
@@ -71,7 +104,7 @@ const CaseStudy = () => {
       <img
         src="/fashion1.png"
         alt="Mockup"
-        className="w-[300px] md:w-[5600px] transform rotate-[10deg]"
+        className="w-[300px] md:w-[5600px] transform rotate-[10deg] animate-moving-up-down"
       />
     </div>
 
@@ -79,32 +112,67 @@ const CaseStudy = () => {
     <div className="text-white w-full md:w-1/2 flex flex-col gap-12">
       
       {/* About Project */}
-      <div className='relative py-10'>
+      <motion.div className='relative py-10'
+      variants={fadeInRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">About Project</h1>
         <p className="text-lg leading-relaxed">
           This project is a modern UI design for a women's clothing website targeting fashion-conscious women aged 18–35. The goal was to create a seamless, trendy, and user-friendly online shopping experience. The design focused on key areas like product discovery, smooth navigation, fast checkout, and personalized shopping experiences.
         </p>
-      </div>
+      </motion.div>
 
       {/* Problems */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Problems</h1>
+        <motion.h1 className="text-4xl md:text-5xl font-bold mb-4"
+        variants={fadeInRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+           transition={{ delay: 0.6 }}>
+          Problems
+        </motion.h1>
         
         <h2 className="text-2xl font-semibold mt-4 mb-2">User-Side Problems:</h2>
-        <ul className="list-disc list-inside text-lg space-y-1">
-          <li>Difficulty finding specific styles or trending items quickly.</li>
-          <li>Poor mobile experience in current fashion sites.</li>
-          <li>Confusing filters and lack of personalization.</li>
-          <li>Frustration with slow checkout or lack of payment options.</li>
-        </ul>
+        <motion.ul
+      className="list-disc list-inside text-lg space-y-1"
+      variants={fadeUpStagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount:0.5 }}
+    >
+      {[
+        'Difficulty finding specific styles or trending items quickly.',
+        'Poor mobile experience in current fashion sites.',
+        'Confusing filters and lack of personalization.',
+        'Frustration with slow checkout or lack of payment options.',
+      ].map((text, idx) => (
+        <motion.li key={idx} variants={fadeUp}>
+          {text}
+        </motion.li>
+      ))}
+    </motion.ul>
 
         <h2 className="text-2xl font-semibold mt-6 mb-2">Business-Side Problems:</h2>
-        <ul className="list-disc list-inside text-lg space-y-1">
-          <li>High bounce rate and low conversion rate.</li>
-          <li>Weak brand identity online.</li>
-          <li>Customers not returning after one-time purchases.</li>
-          <li>Lack of customer insight to improve marketing.</li>
-        </ul>
+        <motion.ul
+      className="list-disc list-inside text-lg space-y-1"
+      variants={fadeUpStagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount:0.5 }}
+    >
+      {[
+        'High bounce rate and low conversion rate.',
+        'Weak brand identity online.',
+        'Customers not returning after one-time purchases.',
+        'Lack of customer insight to improve marketing.',
+      ].map((text, idx) => (
+        <motion.li key={idx} variants={fadeUp}>
+          {text}
+        </motion.li>
+      ))}
+    </motion.ul>
       </div>
     </div>
   </div>
@@ -119,14 +187,24 @@ const CaseStudy = () => {
 
     {/* Left: Solutions Text */}
     <div className="text-white w-full md:w-1/2">
-      <h1 className="text-4xl md:text-5xl font-bold mb-8">Solutions</h1>
-      <ul className="list-disc list-inside space-y-4 text-lg leading-relaxed">
-        <li>Visually modern UI with rich product visuals.</li>
-        <li>Simplified navigation and smart filters.</li>
-        <li>Included seasonal picks, reviews, and AI recommendations.</li>
-        <li>Responsive mobile layout with quick checkout.</li>
-        <li>Interactive wishlist, style gallery, and quick views.</li>
-      </ul>
+      <motion.h1 className="text-4xl md:text-5xl font-bold mb-8"
+      variants={fadeInLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}>
+          Solutions
+      </motion.h1>
+      <motion.ul className="list-disc list-inside space-y-4 text-lg leading-relaxed"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}>
+          <li>Visually modern UI with rich product visuals.</li>
+          <li>Simplified navigation and smart filters.</li>
+          <li>Included seasonal picks, reviews, and AI recommendations.</li>
+          <li>Responsive mobile layout with quick checkout.</li>
+          <li>Interactive wishlist, style gallery, and quick views.</li>
+      </motion.ul>
     </div>
 
     {/* Right: Image */}
@@ -149,10 +227,10 @@ const CaseStudy = () => {
 
   {/* Text content */}
   <motion.div
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
+  initial={{ opacity: 0, y: 40, rotate: -5 }}
+  whileInView={{ opacity: 1, y: 0, rotate: 0 }}
   transition={{ duration: 0.8, ease: 'easeOut' }}
-  viewport={{ once: true }}
+  viewport={{ once: false, amount: 0.5 }} // <-- triggers every time it's 50% in view
   className="bg-[#1a1a1a] border-l-4 border-blue-500 rounded-xl p-8 md:p-12 max-w-3xl text-white shadow-lg"
 >
   <h1 className="text-5xl font-bold mb-6">Research Goals</h1>
@@ -163,6 +241,8 @@ const CaseStudy = () => {
     <li>Find what design elements increase trust and conversion in fashion eCommerce.</li>
   </ul>
 </motion.div>
+
+
 
 </section>
 

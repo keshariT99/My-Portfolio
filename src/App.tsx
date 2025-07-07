@@ -1,5 +1,5 @@
 // App.tsx
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -14,10 +14,15 @@ import CaseStudy from './components/CaseStudy';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
+
+  const location = useLocation();
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-gray-100">
+       {location.pathname !== "/casestudy/traveling-website" && <Navbar />}
+
       <ScrollToTop />
-      <Navbar />
+      
       <main>
         <Routes>
           <Route
