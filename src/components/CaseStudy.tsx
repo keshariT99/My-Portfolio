@@ -9,6 +9,14 @@ const CaseStudy = () => {
   const navigate = useNavigate();
 
 
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7 },
+    },
+  }
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -25,12 +33,16 @@ const CaseStudy = () => {
       
       {/* Background title */}
        <section className="relative w-full h-screen overflow-hidden flex items-center mt-10">
-      <h1 className="absolute text-[120px] font-extrabold text-[#75b9f1] opacity-4 left-10 top-10 z-0 select-none px-40">
+      <h1 className="absolute text-[120px] font-extrabold text-[#75b9f1] opacity-4 left-10 top-10 z-0 select-none px-40 transition-opacity duration-700 ease-out opacity-0 animate-fade-in">
         VIVEE FASHION
       </h1>
 
       {/* Content container */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-60">
+      <motion.div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-60"
+      variants={fadeInRight}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}>
         {/* Left text */}
         <div className="text-[#75b9f1] max-w-md">
           <h2 className="text-2xl md:text-3xl  font-semibold mb-60">
@@ -47,12 +59,12 @@ const CaseStudy = () => {
           />
           
         </div>
-      </div>
+      </motion.div>
     </section>
       
      {/* About & Problems */}
 <section className="relative w-full py-0 px-6 md:px-20 overflow-hidden">
-  <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-7xl mx-auto">
+  <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-7xl mx-auto transition-opacity duration-700 ease-out opacity-0 animate-fade-in">
     
     {/* Left: Image - Moved Up */}
     <div className="flex justify-center md:justify-start w-full md:w-1/2 -mt-10 md:-mt-20">
