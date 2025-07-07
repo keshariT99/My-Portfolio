@@ -31,6 +31,12 @@ const Footer = () => {
   ];
 
   return (
+    <>
+    {/* 🔵 Blur Effect Above Footer */}
+      <div className="relative w-full h-20">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[80%] h-10 bg-[#00E7FF] blur-xl opacity-20 mb-0 " />
+      </div>
+
     <footer className="bg-[#0a0a0a] border-t-[3px] border-[#1a1a1a] pt-16 pb-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-8 mb-8">
@@ -51,6 +57,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 
