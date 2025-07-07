@@ -7,34 +7,6 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "Traveling Website",
-      description: "Embark on unforgettable journeys with our cutting-edge Travel Platform. Seamlessly blending convenience with adventure, our site offers more than just bookings-it crafts exceptional experiences. Every feature is designed to inspire your wanderlust and simplify your travels. Whether it's flights, accommodations, or unique activities, we ensure that each journey is smooth and memorable. Welcome to the future of travel exploration.",
-      image: "travelweb.jpg",
-      category: "Web",
-      stack: ["React", "Tailwind CSS", "Javascript"],
-      link: ["https://github.com/keshariT99/TravelWeb"],
-      demo: ["https://travel-bug-web.vercel.app"],
-      
-    },
-    {
-      title: "Solar Boat E-commerce website",
-      description: "Set sail into a sustainable future with our Solar Boat E-Commerce Platform. Harnessing the power of the sun, we offer a range of eco-friendly, solar-powered boats designed for adventure, relaxation, and efficiency. Our platform combines cutting-edge technology with the elegance of sustainable boating, providing everything from electric motors to solar panels, accessories, and more. Navigate toward a greener tomorrow with our solar-powered solutions.",
-      image: "solar.jpg",
-      category: "Web",
-      stack: ["HTML", "CSS", "Javascript"],
-      link: ["https://github.com/keshariT99/SolarBoat_webApplication"],
-      demo: ["https://solar-boat-web-application.vercel.app/"]
-    },
-    {
-      title: "Animated Loging Form",
-      description: "Experience a seamless and engaging entry with our Animated Login Form. Designed with modern aesthetics and smooth transitions, this form enhances user interaction while maintaining simplicity and functionality. The animations bring a dynamic touch, creating a more enjoyable user experience while ensuring security and efficiency. Say goodbye to static forms and step into a new era of login with style and ease.",
-      image: "login.png",
-      category: "Web",
-      stack: ["HTML", "CSS"],
-      link: ["https://github.com/keshariT99/Animated_loginForm"],
-      demo: ["https://animated-login-form-weld.vercel.app"]
-    },
-    {
       title: "Pizza Delivery Application",
       description: "Indulge in the ultimate pizza experience with our Pizza Delivery Application. Fast, easy, and delicious-order your favorite pizzas from a wide variety of options, all from the comfort of your home. With an attractive user experience, our app makes ordering as fun as enjoying your pizza. It brings the pizzeria to your doorstep with real-time order tracking, personalized recommendations, and seamless payment options.",
       image: "pizzadelivery.jpg",
@@ -72,7 +44,34 @@ const Projects = () => {
       link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=0-1&t=cQe7VfrOH4LVWLGP-1"],
       demo: [""]
     },
-
+    {
+      title: "Traveling Website",
+      description: "Embark on unforgettable journeys with our cutting-edge Travel Platform. Seamlessly blending convenience with adventure, our site offers more than just bookings-it crafts exceptional experiences. Every feature is designed to inspire your wanderlust and simplify your travels. Whether it's flights, accommodations, or unique activities, we ensure that each journey is smooth and memorable. Welcome to the future of travel exploration.",
+      image: "travelweb.jpg",
+      category: "Web",
+      stack: ["React", "Tailwind CSS", "Javascript"],
+      link: ["https://github.com/keshariT99/TravelWeb"],
+      demo: ["https://travel-bug-web.vercel.app"],
+      
+    },
+    {
+      title: "Solar Boat E-commerce website",
+      description: "Set sail into a sustainable future with our Solar Boat E-Commerce Platform. Harnessing the power of the sun, we offer a range of eco-friendly, solar-powered boats designed for adventure, relaxation, and efficiency. Our platform combines cutting-edge technology with the elegance of sustainable boating, providing everything from electric motors to solar panels, accessories, and more. Navigate toward a greener tomorrow with our solar-powered solutions.",
+      image: "solar.jpg",
+      category: "Web",
+      stack: ["HTML", "CSS", "Javascript"],
+      link: ["https://github.com/keshariT99/SolarBoat_webApplication"],
+      demo: ["https://solar-boat-web-application.vercel.app/"]
+    },
+    {
+      title: "Animated Loging Form",
+      description: "Experience a seamless and engaging entry with our Animated Login Form. Designed with modern aesthetics and smooth transitions, this form enhances user interaction while maintaining simplicity and functionality. The animations bring a dynamic touch, creating a more enjoyable user experience while ensuring security and efficiency. Say goodbye to static forms and step into a new era of login with style and ease.",
+      image: "login.png",
+      category: "Web",
+      stack: ["HTML", "CSS"],
+      link: ["https://github.com/keshariT99/Animated_loginForm"],
+      demo: ["https://animated-login-form-weld.vercel.app"]
+    },
     {
       title: "Healthcare Booking Application",
       description: "A Healthcare Booking Application is a user-friendly platform that streamlines the process of finding and booking medical appointments. It includes essential features like a welcome screen, login, home dashboard, doctor search and filter, detailed doctor profiles, and easy appointment booking — making healthcare access more convenient for patients.",
