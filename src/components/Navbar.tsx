@@ -2,45 +2,68 @@
 import { useState, useEffect } from 'react';
 import { User } from 'lucide-react';
 import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState<string>("");
 
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2, // Adjust visibility threshold
-    };
+  const location = useLocation();
+  
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+useEffect(() => {
+  const sections = document.querySelectorAll("section");
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4, // better detection
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  }, options);
+
+  sections.forEach((section) => observer.observe(section));
+
+  // ✅ Fix: When returning to home page, recheck which section is in view
+  if (location.pathname === "/") {
+    const handleInitialHighlight = () => {
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
+          setActiveSection(section.id);
         }
       });
-    }, options);
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+
+    setTimeout(() => {
+      handleInitialHighlight();
+    }, 200); // Give time for layout/rendering
+  }
+
+  return () => {
+    sections.forEach((section) => observer.unobserve(section));
+  };
+}, [location.pathname]);
+  
 
   return (
     <nav className="fixed w-full bg-[#0a0a0a]/80 backdrop-blur-sm z-50 px-4 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link to='/' className="flex items-center gap-2">
           <User className="w-8 h-8 text-[#00E7FF]" />
-          <span className="text-xl font-bold">Portfolio</span>
-        </div>
+          <span className="text-xl font-bold">Portfolio</span >
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#about"
-            className={`hover:text-[#00E7FF] transition-colors ${
+          
+          <a href='#about' className={`hover:text-[#00E7FF] transition-colors ${
               activeSection === "about"
                 ? "border-b-2 border-[#00E7FF]"
                 : "border-b-2 border-transparent"
@@ -48,6 +71,8 @@ const Navbar = () => {
           >
             About Me
           </a>
+  
+          
           <a
             href="#skills"
             className={`hover:text-[#00E7FF] transition-colors ${
@@ -81,7 +106,7 @@ const Navbar = () => {
           <a
             href="#courses"
             className={`hover:text-[#00E7FF] transition-colors ${
-              activeSection === "coursess"
+              activeSection === "courses"
                 ? "border-b-2 border-[#00E7FF]"
                 : "border-b-2 border-transparent"
             }`}
