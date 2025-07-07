@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
