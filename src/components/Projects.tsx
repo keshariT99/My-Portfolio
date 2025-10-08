@@ -71,15 +71,7 @@ const Projects = () => {
       link: ["https://github.com/keshariT99/Animated_loginForm"],
       demo: ["https://animated-login-form-weld.vercel.app"]
     },
-    {
-      title: "Healthcare Booking Application",
-      description: "A Healthcare Booking Application is a user-friendly platform that streamlines the process of finding and booking medical appointments. It includes essential features like a welcome screen, login, home dashboard, doctor search and filter, detailed doctor profiles, and easy appointment booking — making healthcare access more convenient for patients.",
-      image: "booking.jpg",
-      category: "UI/UX",
-      stack: ["Figma"],
-      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=66-170&t=cQe7VfrOH4LVWLGP-1"],
-      demo: [""]
-    },
+    
   ];
 
   const filters = ['All', 'Web', 'UI/UX'];
