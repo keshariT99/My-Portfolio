@@ -22,9 +22,9 @@ const Hero = () => {
         </span> 
         </h1>
           <p className="text-gray-400 mb-8">
-          I am a recent graduate in Information Technology from SLIIT, equipped with strong technical, analytical, and interpersonal skills. 
-                I am eager to leverage my academic background and practical experience in a Software Design & Development. My passion for coding and problem-solving drives me to 
-                contribute to impactful software projects, engage with clients, and refine my software development skills in a dynamic team environment!
+          I’m a graduate in Information Technology from SLIIT with a strong foundation in software design and development. My passion lies in crafting meaningful digital experiences through thoughtful UI/UX design and clean, functional code. 
+          I enjoy blending creativity with problem-solving — turning ideas into intuitive, user-centered interfaces.
+          I’m eager to keep learning, collaborate with diverse teams, and contribute to projects that make a real impact on users and businesses alike.
           </p>
           <div className="flex gap-4">
             <button className="bg-[#00E7FF] text-black px-8 py-3 rounded-lg font-medium hover:bg-[#4ADEDC] transition-colors">
