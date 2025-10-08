@@ -23,7 +23,7 @@ const Projects = () => {
       category: "UI/UX",
       stack: ["Figma"],
       link: ["https://www.figma.com/design/hdgEVNIw2QLSeTdCDtMKdL/mobileApp?node-id=0-1&t=efiDRrO1lSAixBro-1"],
-      demo: ["https://drive.google.com/file/d/1FXiKO40fiQZ38796EB3K_8msJLDCOMVm/view?usp=sharing"]
+      demo: ["https://www.figma.com/proto/hdgEVNIw2QLSeTdCDtMKdL/mobApp?node-id=50-24&t=Z2xpJF1aGLDAQ9An-1"]
     },
     {
       title: "Home Construction Application",
@@ -32,7 +32,7 @@ const Projects = () => {
       category: "UI/UX",
       stack: ["Figma"],
       link: ["https://www.figma.com/design/y9BBvLy0jXkp9BJpgz4Sai/MobileApp?node-id=0-1&t=cyMD8DvPfZq2005m-1"],
-      demo: ["https://drive.google.com/file/d/1PvI3ATiSFCZOmkYGHkgshq19IlM5478V/view?usp=sharing"]
+      demo: ["https://www.figma.com/proto/y9BBvLy0jXkp9BJpgz4Sai/MobileApp?node-id=2-2&t=Z2xpJF1aGLDAQ9An-1"]
     },
     {
       title: "Job Search platform Application",
@@ -40,8 +40,8 @@ const Projects = () => {
       image: "jobSearch.JPG",
       category: "UI/UX",
       stack: ["Figma"],
-      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?node-id=0-1&t=cQe7VfrOH4LVWLGP-1"],
-      demo: [""]
+      link: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?t=5RA5LFVVJ3ZS05kw-1"],
+      demo: ["https://www.figma.com/design/QNct5YNl53BKCqf1jShus7/Mobile-app?t=5RA5LFVVJ3ZS05kw-1"]
     },
     {
       title: "Traveling Website",
