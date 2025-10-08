@@ -21,12 +21,7 @@ const Courses = () => {
         "I have successfully completed the 'Certificate in Introduction to API Testing' course on the 'Great Learning' online course platform.",
       image: "api.png",
     },
-    {
-      title: "Basic of Machine Learning",
-      description:
-        "I have successfully completed the 'Certificate in Basic of Machine Learning' course on the 'Great Learning' online course platform.",
-      image: "ml.png",
-    },
+    
     
   ];
 
