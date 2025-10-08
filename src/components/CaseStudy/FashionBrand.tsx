@@ -95,7 +95,7 @@ const FashionBrand = () => {
             </motion.p>
             
             <motion.div 
-              variants={fadeInUp}
+              variants={fadeInUp} whileHover={scaleOnHover.hover}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               <button 
