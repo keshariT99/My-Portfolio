@@ -1,5 +1,5 @@
 import { TechStack } from './TechStack';
-import { Link as LucideLink } from 'lucide-react';
+//import { Link as LucideLink } from 'lucide-react';
 import { Link as RouterLink } from "react-router-dom";
 
 interface ProjectCardProps {
@@ -7,12 +7,12 @@ interface ProjectCardProps {
   description: string;
   image: string;
   stack: string[];
-  link: string[];
+  //link: string[];
   demo: string[];
   caseStudy?: string;
 }
 
-const ProjectCard = ({ title, description, image, stack, link, demo, caseStudy }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, image, stack, demo, caseStudy }: ProjectCardProps) => {
   return (
     <div className="bg-blue-800/10 border border-cyan-800 rounded-lg overflow-hidden flex flex-col">
       <img src={image} alt={title} className="w-full h-64 object-cover" />
@@ -43,11 +43,11 @@ const ProjectCard = ({ title, description, image, stack, link, demo, caseStudy }
               Demo
             </button>
           </a>
-          <a href={link[0]}>
+          {/**<a href={link[0]}>
             <button className="p-2 rounded-lg hover:bg-[#1a1a1a] transition-colors">
               <LucideLink size={24} />
             </button>
-          </a>
+          </a>*/}
         </div>
       </div>
     </div>
