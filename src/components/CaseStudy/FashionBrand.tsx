@@ -158,7 +158,7 @@ const FashionBrand = () => {
         </motion.div>
       </section>
 
-      {/* Project Overview */}
+      {/* Project Overview  */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div 
