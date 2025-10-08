@@ -120,7 +120,7 @@ const FashionBrand = () => {
               <img
                 src="/landing.png"
                 alt="VIVEE Fashion App Interface"
-                className="relative z-10 w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-700 "
+                className="relative z-10 w-full max-w-5xl mx-auto transform hover:scale-105 transition-transform duration-700 "
                 
               />
             </div>
