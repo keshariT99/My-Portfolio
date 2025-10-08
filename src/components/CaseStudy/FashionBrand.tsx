@@ -1,272 +1,390 @@
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowUp } from 'lucide-react'; // or use any other icon
+import { ArrowLeft, ArrowUp, Smartphone, Users, ShoppingBag, TrendingUp, Check, Star, Play } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const FashionBrand = () => {
-
   const navigate = useNavigate();
-
-
-  const fadeInRight = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.7 },
-    },
-  }
-
-    const fadeInLeft = {
-    hidden: { opacity: 0, x: -50 }, // Start from the left with reduced opacity
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.7 }, // Adjust the duration as needed
-    },
-  }
-
-  const fadeUp = {
-    hidden: {
-    opacity: 0,
-    y: 40, // starts 40px below
-  },
-  visible: {
-    opacity: 1,
-    y: 0, // animates to natural position
-    transition: {
-      duration: 0.8,
-      ease: 'easeOut',
-      },
-    },
-  }
-
-  const fadeUpStagger = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const [showTopBtn, setShowTopBtn] = useState(false);
+  const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowTopBtn(window.scrollY > 300); // Show after scrolling 300px
+      setShowTopBtn(window.scrollY > 300);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-   }, []);
+  }, []);
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const scaleOnHover = {
+    hover: { scale: 1.05, transition: { duration: 0.3 } }
+  };
 
   return (
-    <><div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-md border-b border-white/10 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <button
+              onClick={() => navigate('/')}
+              className="flex items-center gap-2 text-cyan-400 hover:text-white transition-all duration-300 group"
+            >
+              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+              <span className="font-medium">Back to Portfolio</span>
+            </button>
+            <div className="text-white font-bold text-xl">VIVEE Fashion</div>
+          </div>
+        </div>
+      </nav>
 
-      <div className="absolute top-10 left-6 z-50">
-        <button
-          onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-[#75b9f1] hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-          <span className="text-sm font-medium">Home</span>
-        </button>
-      </div>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content */}
+          <motion.div 
+            className="text-center lg:text-left"
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div 
+              variants={fadeInUp}
+              className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-transparent bg-clip-text text-sm font-semibold mb-4 tracking-wider uppercase"
+            >
+              Fashion App Showcase
+            </motion.div>
+            
+            <motion.h1 
+              variants={fadeInUp}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            >
+              VIVEE <br />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
+                Fashion
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              variants={fadeInUp}
+              className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl"
+            >
+              A modern, intuitive fashion app designed for style-conscious women. 
+              Discover trending outfits, personalized recommendations, and seamless shopping experience.
+            </motion.p>
+            
+            <motion.div 
+              variants={fadeInUp}
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
+            >
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2">
+                <Play className="w-5 h-5" />
+                View Demo
+              </button>
+              
+            </motion.div>
+          </motion.div>
 
-      {/* Background title */}
-      <section className="relative w-full h-screen overflow-hidden flex items-center mt-10">
-        <h1 className="absolute text-[120px] font-extrabold text-[#75b9f1] opacity-4 left-20 top-10 z-0 select-none px-40 transition-opacity duration-700 ease-out opacity-0 animate-fade-in">
-          VIVEE FASHION
-        </h1>
+          {/* Right Content - App Mockup */}
+          <motion.div 
+            className="relative flex justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
+              <img
+                src="/landing.png"
+                alt="VIVEE Fashion App Interface"
+                className="relative z-10 w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-700 "
+                
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Content container */}
-        <motion.div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full px-80"
-          variants={fadeInRight}
+      {/* Stats Section */}
+      <section className="py-20 px-4">
+        <motion.div 
+          className="max-w-7xl mx-auto"
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}>
-          {/* Left text */}
-          <div className="text-[#75b9f1] max-w-md">
-            <h2 className="text-xl md:text-xl  font-semibold  mb-60">
-              Every Outfit Is A Step Toward Your Best Self
-            </h2>
-          </div>
-
-          {/* desktop mockups */}
-          <div className="flex mt-10 md:mt-0">
-            <img
-              src="/MacBook.png"
-              alt="Mockup 1"
-              className="w-[450px] md:w-[600px] mt-20 transform rotate-[-5deg]" />
-
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Users, value: "18-35", label: "Target Age Group" },
+              { icon: Smartphone, value: "Mobile", label: "First Design" },
+              { icon: ShoppingBag, value: "Fashion", label: "E-commerce" },
+              { icon: TrendingUp, value: "Modern", label: "UI/UX Design" }
+            ].map((stat, index) => (
+              <motion.div 
+                key={index}
+                variants={fadeInUp}
+                className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <stat.icon className="w-10 h-10 text-cyan-400 mx-auto mb-4" />
+                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </section>
 
-      {/* About & Problems */}
-      <section className="relative w-full py-0 px-6 md:px-20 overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 w-full max-w-7xl mx-auto transition-opacity duration-700 ease-out opacity-0 animate-fade-in">
+      {/* Project Overview */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Project Overview</h2>
+            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+              Creating a seamless fashion experience that bridges the gap between style inspiration and effortless shopping.
+            </p>
+          </motion.div>
 
-          {/* Left: Image - Moved Up */}
-          <div className="flex justify-center md:justify-start w-full md:w-1/2 -mt-10 md:-mt-20">
-            <img
-              src="/fashion1.png"
-              alt="Mockup"
-              className="w-[300px] md:w-[5600px] transform rotate-[10deg] animate-moving-up-down" />
-          </div>
-
-          {/* Right: Text Content */}
-          <div className="text-white w-full md:w-1/2 flex flex-col gap-12">
-
-            {/* About Project */}
-            <motion.div className='relative py-10'
-              variants={fadeInRight}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.5 }}>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">About Project</h1>
-              <p className="text-lg leading-relaxed">
-                This project is a modern UI design for a women's clothing website targeting fashion-conscious women aged 18–35. The goal was to create a seamless, trendy, and user-friendly online shopping experience. The design focused on key areas like product discovery, smooth navigation, fast checkout, and personalized shopping experiences.
-              </p>
+              viewport={{ once: true }}
+            >
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-3xl blur-xl"></div>
+                <img
+                  src="/mobile.png"
+                  alt="Fashion App Features"
+                  className="relative z-10 w-full rounded-2xl"
+                />
+              </div>
             </motion.div>
 
-            {/* Problems */}
-            <div>
-              <motion.h1 className="text-4xl md:text-5xl font-bold mb-4"
-                variants={fadeInRight}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
-                transition={{ delay: 0.6 }}>
-                Problems
-              </motion.h1>
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <motion.div variants={fadeInUp}>
+                <h3 className="text-3xl font-bold text-white mb-4">About the Project</h3>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  VIVEE Fashion is a comprehensive mobile application designed specifically for fashion-conscious women aged 18-35. 
+                  The project focuses on creating an intuitive, trendy, and personalized shopping experience that addresses common 
+                  pain points in online fashion retail.
+                </p>
+              </motion.div>
 
-              <h2 className="text-2xl font-semibold mt-4 mb-2">User-Side Problems:</h2>
-              <motion.ul
-                className="list-disc list-inside text-lg space-y-1"
-                variants={fadeUpStagger}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
-              >
+              <motion.div variants={fadeInUp} className="space-y-4">
+                <h4 className="text-xl font-semibold text-white">Key Features</h4>
                 {[
-                  'Difficulty finding specific styles or trending items quickly.',
-                  'Poor mobile experience in current fashion sites.',
-                  'Confusing filters and lack of personalization.',
-                  'Frustration with slow checkout or lack of payment options.',
-                ].map((text, idx) => (
-                  <motion.li key={idx} variants={fadeUp}>
-                    {text}
-                  </motion.li>
+                  "Personalized style recommendations",
+                  "Advanced filtering and search",
+                  "Seamless checkout process",
+                  "Social shopping features",
+                  "AR try-on experience"
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <span className="text-gray-300">{feature}</span>
+                  </div>
                 ))}
-              </motion.ul>
-
-              <h2 className="text-2xl font-semibold mt-6 mb-2">Business-Side Problems:</h2>
-              <motion.ul
-                className="list-disc list-inside text-lg space-y-1"
-                variants={fadeUpStagger}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
-              >
-                {[
-                  'High bounce rate and low conversion rate.',
-                  'Weak brand identity online.',
-                  'Customers not returning after one-time purchases.',
-                  'Lack of customer insight to improve marketing.',
-                ].map((text, idx) => (
-                  <motion.li key={idx} variants={fadeUp}>
-                    {text}
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-
-
-
-
-      <section className="w-full py-20 px-6 md:px-20  relative overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
-
-          {/* Left: Solutions Text */}
-          <div className="text-white w-full md:w-1/2">
-            <motion.h1 className="text-4xl md:text-5xl font-bold mb-8"
-              variants={fadeInLeft}
+      {/* Problem & Solution */}
+      <section className="py-20 px-4 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16">
+            
+            {/* Problems */}
+            <motion.div
+              variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.5 }}>
-              Solutions
-            </motion.h1>
-            <motion.ul className="list-disc list-inside space-y-4 text-lg leading-relaxed"
-              variants={fadeUp}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-red-900/20 to-orange-900/20 p-8 rounded-3xl border border-red-500/20"
+            >
+              <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                Challenges
+              </h3>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xl font-semibold text-red-300 mb-3">User Challenges</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• Difficulty finding specific styles quickly</li>
+                    <li>• Poor mobile shopping experience</li>
+                    <li>• Lack of personalized recommendations</li>
+                    <li>• Complicated checkout processes</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-xl font-semibold text-red-300 mb-3">Business Challenges</h4>
+                  <ul className="space-y-2 text-gray-300">
+                    <li>• High bounce rates and low conversion</li>
+                    <li>• Weak online brand presence</li>
+                    <li>• Low customer retention rates</li>
+                    <li>• Limited customer insights</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Solutions */}
+            <motion.div
+              variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.5 }}>
-              <li>Visually modern UI with rich product visuals.</li>
-              <li>Simplified navigation and smart filters.</li>
-              <li>Included seasonal picks, reviews, and AI recommendations.</li>
-              <li>Responsive mobile layout with quick checkout.</li>
-              <li>Interactive wishlist, style gallery, and quick views.</li>
-            </motion.ul>
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-green-900/20 to-cyan-900/20 p-8 rounded-3xl border border-cyan-500/20"
+            >
+              <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
+                Solutions
+              </h3>
+              
+              <div className="space-y-4">
+                {[
+                  "Modern, visually appealing interface with rich product imagery",
+                  "Intuitive navigation with smart filtering system",
+                  "AI-powered recommendations and seasonal collections",
+                  "Optimized mobile-first responsive design",
+                  "One-click checkout with multiple payment options",
+                  "Interactive wishlist and social sharing features",
+                  "Quick product preview and AR try-on capabilities"
+                ].map((solution, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-300">{solution}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
+        </div>
+      </section>
 
-          {/* Right: Image */}
-          <div className="relative w-full md:w-1/2 flex justify-center md:justify-end">
-            {/* Decorative blur circle */}
-            <div className="absolute w-[280px] h-[280px] bg-[#57c7ff] rounded-full blur-3xl opacity-50 -bottom-10 -right-10 z-0" />
+      {/* Research Goals */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Research & Discovery</h2>
+            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+              Understanding user behavior and market needs to create a data-driven design solution.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "User Research",
+                description: "Understanding how women aged 18-35 shop for fashion online and their key frustrations.",
+                icon: Users
+              },
+              {
+                title: "Competitor Analysis",
+                description: "Analyzing existing fashion platforms to identify feature gaps and opportunities.",
+                icon: TrendingUp
+              },
+              {
+                title: "Market Insights",
+                description: "Researching design elements that increase trust and conversion in fashion e-commerce.",
+                icon: Star
+              }
+            ].map((goal, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                whileHover="hover"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer"
+              >
+                <goal.icon className="w-12 h-12 text-cyan-400 mb-6" />
+                <h3 className="text-xl font-bold text-white mb-4">{goal.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{goal.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final Image Showcase */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative inline-block"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-600/30 rounded-3xl blur-3xl"></div>
             <img
               src="/fashion2.png"
-              alt="Mockup"
-              className="w-[280px] md:w-[450px] transform rotate-[10deg] relative z-10" />
-          </div>
-
+              alt="VIVEE Fashion Final Design"
+              className="relative z-10 w-full max-w-2xl mx-auto rounded-2xl"
+            />
+          </motion.div>
         </div>
       </section>
 
-
-
-      <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-6 md:px-20 py-20 ">
-
-        {/* Text content */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, rotate: -5 }}
-          whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          viewport={{ once: false, amount: 0.5 }} // <-- triggers every time it's 50% in view
-          className="bg-[#1a1a1a] border-l-4 border-blue-500 rounded-xl p-8 md:p-12 max-w-3xl text-white shadow-lg"
-        >
-          <h1 className="text-5xl font-bold mb-6">Research Goals</h1>
-          <ul className="list-disc pl-6 space-y-4 text-base md:text-lg leading-relaxed">
-            <li>Understand how women aged 18–35 shop for clothes online.</li>
-            <li>Identify key frustrations and expectations from fashion websites.</li>
-            <li>Analyze competitor websites and user reviews to identify feature gaps.</li>
-            <li>Find what design elements increase trust and conversion in fashion eCommerce.</li>
-          </ul>
-        </motion.div>
-
-
-
-      </section>
-
-                {showTopBtn && (
-        <button
+      {/* Scroll to Top Button */}
+      {showTopBtn && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 bg-[#00E7FF] text-black w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold shadow-xl hover:bg-[#4ADFFF] transition-all z-50"
-    aria-label="Scroll to top"
+          className="fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-purple-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 z-50 hover:scale-110"
+          aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />
-        </button>
+        </motion.button>
       )}
-
-    </div></>
-    
+    </div>
   );
 };
 
