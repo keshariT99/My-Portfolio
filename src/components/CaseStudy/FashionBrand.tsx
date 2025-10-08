@@ -73,7 +73,7 @@ const FashionBrand = () => {
               variants={fadeInUp}
               className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-transparent bg-clip-text text-sm font-semibold mb-4 tracking-wider uppercase"
             >
-              Fashion App Showcase
+              Fashion App UI/UX Showcase
             </motion.div>
             
             <motion.h1 
@@ -98,7 +98,9 @@ const FashionBrand = () => {
               variants={fadeInUp}
               className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2">
+              <button 
+                onClick={() => window.location.href = "https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=2-2&t=961xVAlG89w52cOJ-1"}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2">
                 <Play className="w-5 h-5" />
                 View Demo
               </button>
