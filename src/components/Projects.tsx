@@ -8,13 +8,23 @@ const Projects = () => {
   const projects = [
     {
       title: "Clothing Brand Application",
-      description: "a modern and stylish online shopping platform designed for women aged 18–35. It offers a seamless browsing and buying experience with features like a welcoming homepage, curated product categories, new arrivals carousel, detailed product pages, and an easy-to-use shopping cart. With soft colors, elegant typography, and mobile-friendly design, this makes fashion shopping effortless and enjoyable.",
+      description: "A modern and stylish online shopping platform designed for women aged 18–35. It offers a seamless browsing and buying experience with features like a welcoming homepage, curated product categories, new arrivals carousel, detailed product pages, and an easy-to-use shopping cart. With soft colors, elegant typography, and mobile-friendly design, this makes fashion shopping effortless and enjoyable.",
       image: "clothingweb.JPG",
       category: "UI/UX",
       stack: ["Figma"],
       link: ["https://www.figma.com/design/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1"],
       demo: ["https://www.figma.com/proto/fX4CMNdvyDCpdlu2FKY0cn/Fashion-Brand?node-id=0-1&t=MM3scR7seZWEMXBh-1 "],
       caseStudy: "/casestudy/fashion-web"
+    },
+    {
+      title: "Event Booking & Management Application",
+      description: "A modern and elegant event booking and management platform designed for organizers and attendees alike. It offers a seamless experience for browsing events, tracking bookings, managing attendees, and viewing key performance insights. With clean layouts, intuitive navigation, data-driven dashboards, and a professional color palette, Eventra makes event planning, monitoring, and engagement effortless and visually refined.",
+      image: "eventBooking.png",
+      category: "UI/UX",
+      stack: ["Figma"],
+      link: ["https://www.figma.com/design/MO3D0Cn2CRXtyGz9cOsX8i/Event-Management?node-id=9-3&t=UyRUhuCAP4k3MeHu-1"],
+      demo: ["https://www.figma.com/proto/MO3D0Cn2CRXtyGz9cOsX8i/Event-Management?node-id=9-3&t=UyRUhuCAP4k3MeHu-1 "],
+      
     },
     {
       title: "Pizza Delivery Application",
